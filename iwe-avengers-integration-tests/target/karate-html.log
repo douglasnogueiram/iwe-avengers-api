@@ -1,27 +1,24 @@
-20:48:38.267 karate.env system property was: null 
-20:48:38.617 request:
+19:20:50.759 karate.env system property was: null 
+19:20:51.062 request:
 1 > GET https://lblflgf89j.execute-api.us-east-1.amazonaws.com/dev/avengers/aaaa-bbbb-cccc-dddd
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: lblflgf89j.execute-api.us-east-1.amazonaws.com
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-20:48:39.472 response time in milliseconds: 853
+19:20:51.858 response time in milliseconds: 794
 1 < 200
 1 < Connection: keep-alive
-1 < Content-Length: 101
+1 < Content-Length: 74
 1 < Content-Type: application/json
-1 < Date: Thu, 20 Sep 2018 23:48:38 GMT
-1 < x-amz-apigw-id: Niy5kHksoAMFncA=
-1 < x-amzn-RequestId: b257c853-bd2f-11e8-9099-e5dd183582f9
-{
-  "id" : 'aaaa-bbbb-cccc-dddd',
-  "name" : 'Capitao America',
-  "secretIdentity" : 'Steve Rogers'
-}
+1 < Date: Mon, 24 Sep 2018 22:20:51 GMT
+1 < X-Amzn-Trace-Id: Root=1-5ba96343-ac3e7db063ce8eacc822b08c;Sampled=0
+1 < x-amz-apigw-id: NvxyjHuxIAMF7Ag=
+1 < x-amzn-RequestId: 18792164-c048-11e8-8086-db792a136b15
+{"id":"aaaa-bbbb-cccc-dddd","name":"Hulk","secretIdentity":"Bruce Banner"}
 
-20:48:39.553 karate.env system property was: null 
-20:48:39.561 request:
+19:20:51.902 karate.env system property was: null 
+19:20:51.907 request:
 1 > POST https://lblflgf89j.execute-api.us-east-1.amazonaws.com/dev/avengers
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -31,18 +28,18 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Capitain America","secretIdentity":"Steve Rogers"}
 
-20:48:40.008 response time in milliseconds: 446
+19:20:52.339 response time in milliseconds: 431
 1 < 201
 1 < Connection: keep-alive
 1 < Content-Length: 0
 1 < Content-Type: application/json
-1 < Date: Thu, 20 Sep 2018 23:48:39 GMT
-1 < x-amz-apigw-id: Niy5pF7ToAMFgpQ=
-1 < x-amzn-RequestId: b2ae4cd9-bd2f-11e8-a44b-43d08266bc53
+1 < Date: Mon, 24 Sep 2018 22:20:52 GMT
+1 < x-amz-apigw-id: NvxyoHyNIAMFp1Q=
+1 < x-amzn-RequestId: 18c79000-c048-11e8-84c0-07e8ab578ad7
 
 
-20:48:40.025 karate.env system property was: null 
-20:48:40.027 request:
+19:20:52.353 karate.env system property was: null 
+19:20:52.355 request:
 1 > POST https://lblflgf89j.execute-api.us-east-1.amazonaws.com/dev/avengers
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -52,35 +49,35 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Capitao America"}
 
-20:48:40.487 response time in milliseconds: 459
+19:20:52.796 response time in milliseconds: 440
 1 < 400
 1 < Connection: keep-alive
 1 < Content-Length: 35
 1 < Content-Type: application/json
-1 < Date: Thu, 20 Sep 2018 23:48:39 GMT
-1 < x-amz-apigw-id: Niy5uG79oAMF9Yg=
-1 < x-amzn-RequestId: b2f4f2aa-bd2f-11e8-98f1-47f12aea8cd6
+1 < Date: Mon, 24 Sep 2018 22:20:52 GMT
+1 < x-amz-apigw-id: NvxytHSuIAMFa9g=
+1 < x-amzn-RequestId: 190c136e-c048-11e8-a837-5dc9d9a0ba2e
 {"message": "Invalid request body"}
 
-20:48:40.512 karate.env system property was: null 
-20:48:40.515 request:
+19:20:52.805 karate.env system property was: null 
+19:20:52.807 request:
 1 > DELETE https://lblflgf89j.execute-api.us-east-1.amazonaws.com/dev/avengers/aaaa-bbbb-cccc-dddd
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: lblflgf89j.execute-api.us-east-1.amazonaws.com
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-20:48:40.949 response time in milliseconds: 434
+19:20:53.253 response time in milliseconds: 446
 1 < 204
 1 < Connection: keep-alive
 1 < Content-Length: 0
 1 < Content-Type: application/json
-1 < Date: Thu, 20 Sep 2018 23:48:40 GMT
-1 < x-amz-apigw-id: Niy5zFJLIAMF5uQ=
-1 < x-amzn-RequestId: b33e0a23-bd2f-11e8-ba24-fb5fd188dddb
+1 < Date: Mon, 24 Sep 2018 22:20:52 GMT
+1 < x-amz-apigw-id: NvxyxEHCIAMF66A=
+1 < x-amzn-RequestId: 1952b8bf-c048-11e8-b440-ab31a1ef7926
 
-20:48:40.961 karate.env system property was: null 
-20:48:40.964 request:
+19:20:53.264 karate.env system property was: null 
+19:20:53.268 request:
 1 > PUT https://lblflgf89j.execute-api.us-east-1.amazonaws.com/dev/avengers/aaaa-bbbb-cccc-dddd
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -90,22 +87,22 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Homem Aranha","secretIdentity":"Peter Parker"}
 
-20:48:41.400 response time in milliseconds: 435
+19:20:53.776 response time in milliseconds: 508
 1 < 200
 1 < Connection: keep-alive
 1 < Content-Length: 101
 1 < Content-Type: application/json
-1 < Date: Thu, 20 Sep 2018 23:48:40 GMT
-1 < x-amz-apigw-id: Niy53FZXIAMFk1Q=
-1 < x-amzn-RequestId: b3828d5b-bd2f-11e8-9984-458210b77845
+1 < Date: Mon, 24 Sep 2018 22:20:53 GMT
+1 < x-amz-apigw-id: Nvxy2EhsoAMFe6g=
+1 < x-amzn-RequestId: 199f041f-c048-11e8-902b-69e675208581
 {
   "id" : "aaaa-bbbb-cccc-dddd",
   "name" : "Capitao America",
   "secretIdentity" : "Peter Parker"
 }
 
-20:48:41.425 karate.env system property was: null 
-20:48:41.428 request:
+19:20:53.788 karate.env system property was: null 
+19:20:53.791 request:
 1 > PUT https://lblflgf89j.execute-api.us-east-1.amazonaws.com/dev/avengers/aaaa-bbbb-cccc-dddd
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -115,22 +112,20 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Homem Aranha"}
 
-20:48:41.861 response time in milliseconds: 433
+19:20:54.233 response time in milliseconds: 442
 1 < 400
 1 < Connection: keep-alive
 1 < Content-Length: 35
 1 < Content-Type: application/json
-1 < Date: Thu, 20 Sep 2018 23:48:41 GMT
-1 < x-amz-apigw-id: Niy58GBXoAMFgpQ=
-1 < x-amzn-RequestId: b3c7858d-bd2f-11e8-a44b-43d08266bc53
+1 < Date: Mon, 24 Sep 2018 22:20:53 GMT
+1 < x-amz-apigw-id: Nvxy7HOEoAMF0Mg=
+1 < x-amzn-RequestId: 19e5f828-c048-11e8-ab0e-ebe38d97e35d
 {"message": "Invalid request body"}
 
-8ff
+f29-c047-11e8-88d9-9755958a5b43
 {"message": "Invalid request body"}
 
-         <div class="upper-nav">
-                <ol>
-                    <li class="signin">
+  <li class="signin">
                         <a href="https://www.marvel.com/signin">
                             <svg class="desktop-signin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.6 66.7"><path fill-rule="evenodd" d="M59.5 15.1L53 51.4c0 .4-.3.6-.6.6h-6.5c-.3 0-.6-.2-.8-.6l-8.8-24.7H36l-4.3 24.7c-.1.3-.3.6-.6.6H25c-.3 0-.6-.2-.5-.6l6.6-37.3c.1-.3.3-.6.6-.6h6.4c.5 0 .7.2.8.6l8.8 24.7h.3l5.5-30.4C47.9 3.7 40.6.9 32.7.9 14.7.9.2 15.5.2 33.4c0 8.8 3.5 16.7 9.1 22.5l7.3-41.7c.1-.3.3-.6.6-.6H24c.3 0 .5.2.5.6l-8.3 47.2c4.8 2.8 10.4 4.5 16.4 4.5 17.9 0 32.5-14.5 32.5-32.5 0-6.8-2.1-13.1-5.6-18.3z"></path></svg>
                             <svg class="mobile-signin" xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16"><g fill-rule="evenodd"><path d="M0 14h24v2H0zM0 8h24v2H0zM0 2h24v2H0z"></path></g></svg>
