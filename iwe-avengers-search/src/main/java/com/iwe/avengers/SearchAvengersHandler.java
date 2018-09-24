@@ -23,5 +23,6 @@ public class SearchAvengersHandler implements RequestHandler<Avenger, HandlerRes
 		context.getLogger().log("[#] - Avenger found!");
 		
 		return response;
+		
 	}
 }
