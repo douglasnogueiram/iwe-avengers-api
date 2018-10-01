@@ -13,17 +13,16 @@ function() {
 """
 * def token = call getToken
 
-
 Scenario: Deve retornar acesso não autorizado
 Given path 'avengers', 'anyid'
 When method get
 Then status 401
 
 
-
 Scenario: Avenger not found
 
 Given path 'avengers', 'avenger-not-found'
+And header Authorization = 'Bearer ' + token
 When method get
 Then status 404
 And header Authorization = 'Bearer ' + token
@@ -40,6 +39,7 @@ And match response == {id: '#string', name: 'Homem Aranha', secretIdentity: 'Pet
 * def savedAvenger = response
 
 Given path 'avengers', savedAvenger.id
+And header Authorization = 'Bearer ' + token
 When method get
 Then status 200
 And match $ == savedAvenger
@@ -52,51 +52,63 @@ When method post
 Then status 400
 
 Scenario: Deleta um avenger existente
+
+#Create a new Avenger
 Given path 'avengers'
-And request {name: 'Teste deleta Avenger', secretIdentity: 'Identidade secreta teste deleta'}
+And header Authorization = 'Bearer ' + token
+And request {name: 'Hulk', secretIdentity: 'Bruce Banner'}
 When method post
 Then status 201
 
-* def savedAvengerDeleted = response
+* def avengerToDelete = response
 
-Given path 'avengers', savedAvengerDeleted.id
+#Delete the Avenger
+Given path 'avengers', avengerToDelete.id
+And header Authorization = 'Bearer ' + token
 When method delete
 Then status 204
 
-Given path 'avengers', savedAvengerDeleted.id
+#Search deleted Avenger
+Given path 'avengers', avengerToDelete.id
+And header Authorization = 'Bearer ' + token
 When method get
 Then status 404
-And header Authorization = 'Bearer ' + token
-
-
 
 
 Scenario: Erro ao deletar avenger, por nao encontrar id
 Given path 'avengers', 'xxxx'
+And header Authorization = 'Bearer ' + token
 When method delete
 Then status 404
 
 
 Scenario: Atualiza um id com sucesso
+#Create a new Avenger
 Given path 'avengers'
-And request {name: 'Teste antes atualizar nome', secretIdentity: 'Identidade secreta antes atualizar'}
+And header Authorization = 'Bearer ' + token
+And request {name: 'Captain', secretIdentity: 'Steve'}
 When method post
 Then status 201
 
-
 * def updatedAvengerDeleted = response
 
+#Updates Avenger
 Given path 'avengers', updatedAvengerDeleted.id
-And request {name: 'Teste depois atualizar nome x', secretIdentity: 'Identidade secreta depois atualizar x'}
+And header Authorization = 'Bearer ' + token
+And request {name: 'Captain America', secretIdentity: 'Steve Rogers'}
 When method put
 Then status 200
 And match $.id == updatedAvengerDeleted.id
-And match $.name == 'Teste depois atualizar nome'
-And match $.secretIdentity == 'Identidade secreta depois atualizar'
+And match $.name == 'Captain America'
+And match $.secretIdentity == 'Steve Rogers'
 
 Given path 'avengers', updatedAvengerDeleted.id
+And header Authorization = 'Bearer ' + token
 When method get
 Then status 200
+And match $.id ==  updatedAvengerDeleted.id
+And match $.name == 'Captain America'
+And match $.secretIdentity == 'Steve Rogers'
 
 
 Scenario: Erro ao tentar atualizar recurso, por nao informar campos obrigatorios

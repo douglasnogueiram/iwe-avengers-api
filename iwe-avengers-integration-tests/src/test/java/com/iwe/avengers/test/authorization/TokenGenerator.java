@@ -49,4 +49,12 @@ public class TokenGenerator {
 		return authresult;
 	}
 
+	public static void main(String[] args) {
+		
+		TokenGenerator tokenGenerator = new TokenGenerator();
+		String token = tokenGenerator.getToken();
+		
+		System.out.println(token);
+
+	}
 }

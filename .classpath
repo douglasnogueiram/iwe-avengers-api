@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="iwe-avengers-create/src/main/java"/>
+	<classpathentry kind="src" path="iwe-avengers-integration-tests/src/test/java"/>
+	<classpathentry kind="src" path="iwe-avengers-remove/src/main/java"/>
+	<classpathentry kind="src" path="iwe-avengers-search/src/main/java"/>
+	<classpathentry kind="src" path="iwe-avengers-service/src/main/java"/>
+	<classpathentry kind="src" path="iwe-avengers-update/src/main/java"/>
+	<classpathentry kind="lib" path="gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
