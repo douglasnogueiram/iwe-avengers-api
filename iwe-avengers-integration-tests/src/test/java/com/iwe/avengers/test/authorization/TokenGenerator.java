@@ -18,6 +18,7 @@ public class TokenGenerator {
 		
 		String authresult = null;
 
+		//Client id do avengers-api
 		final String clientId = "bulctdle5ppdk7bpuvmbhb2j3";
 		final String userPoolId = "us-east-1_6aDrmaiUR";
 
@@ -44,6 +45,7 @@ public class TokenGenerator {
 			RespondToAuthChallengeRequest challengeRequest = auth.userSrpAuthRequest(initiateAuthResult, "12345678");
 			RespondToAuthChallengeResult result = cognitoIdentityProvider.respondToAuthChallenge(challengeRequest);
 			authresult = result.getAuthenticationResult().getIdToken();
+			
 		}
 
 		return authresult;

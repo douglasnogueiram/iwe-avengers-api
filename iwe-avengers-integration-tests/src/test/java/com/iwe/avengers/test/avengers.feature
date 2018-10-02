@@ -31,6 +31,7 @@ And header Authorization = 'Bearer ' + token
 Scenario: create a new avenger
 
 Given path 'avengers'
+And header Authorization = 'Bearer ' + token
 And request {name: 'Homem Aranha', secretIdentity: 'Peter Parker'}
 When method post
 Then status 201
@@ -47,6 +48,7 @@ And header Authorization = 'Bearer ' + token
 
 Scenario: Creates a new avenger without the required data
 Given path 'avengers'
+And header Authorization = 'Bearer ' + token
 And request {name: 'Capitao America'} 
 When method post
 Then status 400
@@ -81,6 +83,13 @@ And header Authorization = 'Bearer ' + token
 When method delete
 Then status 404
 
+Scenario: Should return non-authorized access
+
+Given path 'avengers', 'anyid'
+And header Authorization = 'Bearer ' + token + 'a'
+When method get
+Then status 403
+
 
 Scenario: Atualiza um id com sucesso
 #Create a new Avenger
@@ -113,12 +122,14 @@ And match $.secretIdentity == 'Steve Rogers'
 
 Scenario: Erro ao tentar atualizar recurso, por nao informar campos obrigatorios
 Given path 'avengers', 'aaaa-bbbb-cccc-dddd'
+And header Authorization = 'Bearer ' + token
 And request {name: 'Homem Aranha'}
 When method put
 Then status 400
 
 Scenario: Erro ao tentar atualizar recurso, por nao encontrar id
 Given path 'avengers', 'xxxx'
+And header Authorization = 'Bearer ' + token
 And request {name: 'Homem Aranha', secretIdentity: 'Peter Parker'}
 When method put
 Then status 404
