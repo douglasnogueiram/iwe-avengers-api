@@ -16,7 +16,7 @@ public class CreateAvengersHandler implements RequestHandler<Avenger, HandlerRes
 		
 		Avenger createdAvenger = null;
 		
-		context.getLogger().log("[#] - Inicia criacao de avenger");
+		context.getLogger().log("[#] - Inicia criacao de avenger...");
 		
 		createdAvenger = dao.create(newAvenger);
 					
